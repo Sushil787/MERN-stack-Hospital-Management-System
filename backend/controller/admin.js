@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const appointments = require("../model/appointments");
 const pquery = require("../model/patientmessage");
 const ambulance = require("../model/Ambulance")
+const user=require("../model/user")
 const bcryptjs = require('bcryptjs');
 const add_doctor = async (req, res) => {
     try {
@@ -138,6 +139,30 @@ const single_appointments = async (req, res) => {
     }
 }
 
+const single_user=async (req,res)=>{
+    const {userId}=req.params;
+    console.log(userId)
+
+    try {
+        const singleUser=await  user.findById(userId)
+        if(!singleUser){
+            return res.status(401).json({message:"no user found"})
+        }
+        else{
+            return res.json({singleUser})
+        }
+        
+    } catch (
+        error
+        
+    ) {
+        return res.status(500).json({message:error.message})
+        
+    }
+
+
+}
+
 
 
 
@@ -145,5 +170,5 @@ const single_appointments = async (req, res) => {
 
 
 module.exports = {
-    add_doctor, delete_doctor, all_appointments, update_appointment, user_query, ambulance_service,single_appointments
+    add_doctor, delete_doctor, all_appointments, update_appointment, user_query, ambulance_service,single_appointments,single_user
 };

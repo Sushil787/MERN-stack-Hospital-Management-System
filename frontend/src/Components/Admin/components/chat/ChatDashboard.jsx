@@ -4,14 +4,17 @@ import Massenger from './Massenger'
 import './style.css'
 
 const ChatDashboard = () => {
+
+  const [currentuser,setCurrentuser]=React.useState(null)
+    const [messages,setMessages]=React.useState([])
   return (
     <div className="home">
         <div className="container">
             <div className="sidebar">
-                <Sidebar />
+                <Sidebar seCurrentuser={setCurrentuser} />
             </div>
             <div className="massenger">
-                <Massenger />
+                <Massenger currentuser={currentuser} />
             </div>
         </div>
 

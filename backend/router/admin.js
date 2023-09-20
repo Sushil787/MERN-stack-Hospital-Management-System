@@ -12,6 +12,7 @@ admin_router.get("/userquery", auth_middleware, role_check,admin_contoller.user_
 admin_router.get("/ambulance", auth_middleware, role_check,admin_contoller.ambulance_service);
 
 admin_router.get("/single/:id",auth_middleware, role_check, admin_contoller.single_appointments);
+admin_router.get("/singleuser/:userId",admin_contoller.single_user);
 
 
 

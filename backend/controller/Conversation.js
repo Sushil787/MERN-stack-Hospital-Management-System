@@ -1,5 +1,5 @@
 const conversation=require('../model/Conversation');
-const message=require('../model/Message');
+
 
 
 
@@ -29,10 +29,11 @@ const new_conversation=async(req,res)=>{
 const get_conversation=async(req,res)=>{
 
     try{
-        const conversation=await conversation.find({
+        const Conversation=await conversation.find({
             member:{$in:[req.params.userId]}
         });
-        res.status(200).json(conversation);
+        console.log(Conversation)
+        res.status(200).json(Conversation);
     }catch(err){
         res.status(500).json(err);
     }

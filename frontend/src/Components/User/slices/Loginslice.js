@@ -22,6 +22,7 @@ export const loginAsync = createAsyncThunk(
         localStorage.setItem("is_admin", response.data.user.is_admin);
         localStorage.setItem("jwtExpiration", expirationTime);
         localStorage.setItem("user",response.data.user.username)
+        localStorage.setItem("userId",response.data.user._id)
       }
 
       

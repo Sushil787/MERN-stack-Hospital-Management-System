@@ -3,13 +3,13 @@ import Navbar from './Navbar'
 import Search from './Search'
 import User from './User'
 
-const Sidebar = () => {
+const Sidebar = ({setCurrentuser}) => {
   return (
     <div className='sidebar'>
 
         <Navbar/>
         <Search/>
-        <User/>
+        <User  setCurrentuser={setCurrentuser}/>
 
     </div>
   )
