@@ -3,6 +3,7 @@ const admin_router = require("./router/admin");
 const auth_router = require("./router/auth");
 const public_router = require("./router/public");
 const doctor_router = require("./router/doctor");
+const chat_router=require("./router/Chat");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const morgan = require('morgan');
@@ -23,6 +24,7 @@ app.use(admin_router);
 app.use(patient_router);
 app.use("/public",public_router)
 app.use(doctor_router);
+app.use(chat_router);
 
 // {
 //     origin:"www.xyz.com",
