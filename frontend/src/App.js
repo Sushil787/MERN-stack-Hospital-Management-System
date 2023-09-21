@@ -25,6 +25,7 @@ import DDashboard from "./Components/Doctor/Dashboard";
 import UserProfile from "./Components/User/pages/userProfile";
 
 import AmbulanceBooking from "./Components/User/pages/Ambulance";
+import ChatDashboard from "./Components/User/chat/ChatDashboard";
 
 function App() {
   const [is_admin, setIsAdmin] = useState(localStorage.getItem("is_admin"));
@@ -76,6 +77,7 @@ function App() {
                  <Route path="/ambulance-booking" Component={AmbulanceBooking} />
                  <Route path="/report/:id" Component={Report} />
                   <Route path="/userprofile" Component={UserProfile} />
+                  <Route path="/chat" Component={ChatDashboard} />
                 </Route>
 {/* scope of private routes */}
                 

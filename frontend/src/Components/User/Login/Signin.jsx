@@ -51,8 +51,14 @@ function SignUpForm() {
 
         values
       );
+      console.log(response.data)
 
-      console.log(response);
+      if(response)
+      {
+        const res=await axios.post("http://localhost:8080/new-conversation",{ senderId:"647f597ea3a34f51c48893b7",receiverId:response?.data?.patient?._id})
+        console.log(res)
+      }
+
 
       Navigate("/login");
     } catch (error) {

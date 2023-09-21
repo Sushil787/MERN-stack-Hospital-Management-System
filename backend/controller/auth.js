@@ -92,7 +92,7 @@ const signup = async (req, res) => {
         const new_user = await user.findOne({ username, email });
         if (!new_user) {
           hashed_password = await bcryptjs.hash(password, 8);
-          await user.create({
+          const patient= await user.create({
             username,
             password: hashed_password,
             email,
@@ -101,7 +101,7 @@ const signup = async (req, res) => {
             location,
             phone,
           });
-          return res.status(200).json({ message: "user created" });
+          return res.status(200).json({ message: "user created",patient });
         } else {
           return res.status(409).json({ message: "user already exist" });
         }
