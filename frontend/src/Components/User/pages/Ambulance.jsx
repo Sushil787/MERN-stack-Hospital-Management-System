@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Typography, Container, TextField, TextareaAutosize, Button, Grid, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import axios from 'axios';
 import toast from "react-hot-toast";
@@ -15,6 +15,8 @@ const AmbulanceBooking = () => {
     city: '',
     state: '',
     zip: '',
+    latitude:'',
+    longitude:'',
     emergencyType: '',
   });
 
@@ -43,6 +45,16 @@ const AmbulanceBooking = () => {
 }
 
   };
+
+
+  useEffect(()=>{
+    navigator.geolocation.getCurrentPosition(pos=>{
+    setBookingInfo({...bookingInfo,latitude:pos.coords.latitude,longitude:pos.coords.longitude})
+
+    })
+
+  },[])
+  console.log(bookingInfo)
 
   return (
     <Container maxWidth="sm">

@@ -5,7 +5,7 @@ const Message = ({message}) => {
   return (
     <div className={message.sender===localStorage.getItem("userID")?"owner":"message"}>
         <div className="messageinfo">  
-        <Avatar sx={{ width: 30, height: 30 }}>N</Avatar> 
+        <Avatar sx={{ width: 30, height: 30 }}>A</Avatar> 
   
         
         </div>

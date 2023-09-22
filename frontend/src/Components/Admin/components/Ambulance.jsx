@@ -32,11 +32,15 @@ export default function Enquery() {
       {field:"state",headerName:"state",width:150},
       {field:"city",headerName:"city",width:150},
       {field:"zip",headerName:"Zip Code",width:150},
-      { field: 'emergencyType', headerName: 'EmergenctType', width: 200 },
+      { field: 'emergencyType', headerName: 'EmergenctType', width: 150 },
+      { field: 'latitude', headerName: 'Latitude', width: 100 },
+      { field: 'longitude', headerName: 'Longitude', width: 100 }
+
+
     ];
   
     return (
-      <div style={{ height: 400, width: '100%', paddingLeft:20 }}>
+      <div style={{ height: 400, width: '90%', paddingLeft:20 }}>
         <DataGrid
           rows={datas}
           columns={columns}

@@ -114,7 +114,7 @@ const payment = async (req, res) => {
 
 const ambulance_booking= async (req,res)=>{
  
-  const {name,phoneNumber,address,emergencyType,city,state,zip}=req.body;
+  const {name,phoneNumber,address,emergencyType,city,state,zip,latitude,longitude}=req.body;
   console.log(name,phoneNumber,address,emergencyType)
 
   try {
@@ -124,7 +124,7 @@ const ambulance_booking= async (req,res)=>{
     }
   
 
-      await ambulance.create({name,phoneNumber,address,emergencyType,city,state,zip});
+      await ambulance.create({name,phoneNumber,address,emergencyType,city,state,zip,latitude,longitude});
       return res.status(200).json({message:"ambulance book successfully"});
   
 

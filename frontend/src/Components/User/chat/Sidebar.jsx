@@ -8,7 +8,7 @@ const Sidebar = ({setCurrentuser}) => {
     <div className='sidebar'>
 
         <Navbar/>
-        <Search/>
+        {/* <Search/> */}
         <User  setCurrentuser={setCurrentuser}/>
 
     </div>

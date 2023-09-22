@@ -36,6 +36,12 @@ const ambulance_schema = mongoose.Schema({
         type:String,
         required:true
 
+    },
+    latitude:{
+        type:String
+    },
+    longitude:{
+        type:String
     }
 
 });

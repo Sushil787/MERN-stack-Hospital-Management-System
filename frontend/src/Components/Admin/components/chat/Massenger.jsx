@@ -74,12 +74,12 @@ const Massenger = ({currentuser}) => {
             currentuser?
             <>
         <div className="chatinfo">
-            <span>Niroj</span>
+            {/* <span>Niroj</span> */}
             
         </div>
 
 
-        <div className="messages">
+        <div className="chatbox">
     {
       messages?.map((m)=>(
         <Message message={m} key={m._id}/>

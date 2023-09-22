@@ -1,4 +1,5 @@
 import React from 'react'
+import MissedVideoCallIcon from '@mui/icons-material/MissedVideoCall';
 
 import axios from 'axios'
 import { useEffect } from 'react'
@@ -74,7 +75,12 @@ const Massenger = ({currentuser}) => {
             currentuser?
             <>
         <div className="chatinfo">
-            <span>Niroj</span>
+          <span>chat</span>
+
+          <div>
+            <MissedVideoCallIcon/>
+            
+          </div>
             
         </div>
 

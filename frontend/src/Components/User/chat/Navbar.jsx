@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
 <div className="navbar">
     <span className="logo">
-        Admin
+        {localStorage.getItem("user")}
     </span>
     <div className="user">
         <button className='button'>logout</button>

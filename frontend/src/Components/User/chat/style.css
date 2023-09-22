@@ -117,6 +117,7 @@ p{
    
 
     align-items: center;
+    justify-content: space-between;
     padding: 10px;
     height:50px;
     background-color: #6359f0;
@@ -125,7 +126,7 @@ p{
     display: flex;
     flex-direction: column;
     padding: 10px;
-    min-height: calc(100% - 160px);
+    height:350px;
     overflow-y: scroll;
     background-color: #f0f0f0;
 }
